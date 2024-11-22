@@ -41,8 +41,8 @@ Función matemática para la curva: Se supuso que la forma del bache podía apro
 Cálculo integral: Con la ecuación de la curva establecida, se procedió a calcular el área bajo la curva utilizando el cálculo integral. La fórmula básica utilizada fue:
 
                             
-                         ![formula basica](https://github.com/user-attachments/assets/7e64322a-2d88-4e47-b0cd-27c0815a2919)
-                         
+               
+![formula basica](https://github.com/user-attachments/assets/4f6af199-97f0-4c35-b341-44237e1ef41e)
 
 
 
