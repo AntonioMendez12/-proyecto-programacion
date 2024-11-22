@@ -1,4 +1,4 @@
-Código markdown
+ Código markdown
 # Creación de un programa para calcular el área del bache y así optimizar su llenado
 **Autores:** Iram Antonio Mendez Partida, Sergio Mejia Manso
 
@@ -75,10 +75,13 @@ La formula general para el calculo de volumen de un bache es:
 
 Ejemplo:
 
+![eje-1](https://github.com/user-attachments/assets/f4247754-11d8-4618-aa57-e1083af63916)
 
+![eje-2](https://github.com/user-attachments/assets/f220257b-49b5-477d-9b26-0cb9ca01835b)
 
+![eje-3](https://github.com/user-attachments/assets/76289281-2d82-46bd-b309-bc1e1f8a95fb)
 
-![ejemplo baches](https://github.com/user-attachments/assets/c516c411-a10d-4ef7-bf3f-635d037d7536)
+![eje-4](https://github.com/user-attachments/assets/7b286a99-59ef-4aeb-933a-18385384f234)
 
 
 
