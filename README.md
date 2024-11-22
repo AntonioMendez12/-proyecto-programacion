@@ -40,7 +40,8 @@ Función matemática para la curva: Se supuso que la forma del bache podía apro
 
 Cálculo integral: Con la ecuación de la curva establecida, se procedió a calcular el área bajo la curva utilizando el cálculo integral. La fórmula básica utilizada fue:
 
-                                 ![image](https://github.com/user-attachments/assets/5ff7599c-a25e-4f9f-9d6d-5b318985e8b0)
+                            
+                         ![formula basica](https://github.com/user-attachments/assets/7e64322a-2d88-4e47-b0cd-27c0815a2919)
 
 
 
@@ -64,7 +65,9 @@ Revisión y evaluación: Finalmente, se revisó la calidad de la reparación, as
 Una vez realizadas las reparaciones, se llevó a cabo un monitoreo de las condiciones del pavimento en los baches reparados. Se realizaron visitas periódicas para evaluar la durabilidad de las reparaciones, observando su resistencia al tráfico pesado y a las condiciones climáticas. Además, se registraron los costos de mantenimiento antes y después de la intervención para medir el impacto económico.
 Manejo de datos
 La formula general para el calculo de volumen de un bache es:
-                               ![image](https://github.com/user-attachments/assets/b6dccea1-1504-48b4-9e38-64b126699151)
+
+
+                     ![image](https://github.com/user-attachments/assets/b6dccea1-1504-48b4-9e38-64b126699151)
 
 
 Ejemplo:
