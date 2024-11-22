@@ -63,13 +63,15 @@ Revisión y evaluación: Finalmente, se revisó la calidad de la reparación, as
 Una vez realizadas las reparaciones, se llevó a cabo un monitoreo de las condiciones del pavimento en los baches reparados. Se realizaron visitas periódicas para evaluar la durabilidad de las reparaciones, observando su resistencia al tráfico pesado y a las condiciones climáticas. Además, se registraron los costos de mantenimiento antes y después de la intervención para medir el impacto económico.
 Manejo de datos
 La formula general para el calculo de volumen de un bache es:
-                                 ![image](https://github.com/user-attachments/assets/04ec8f1b-b0a0-40cf-8da4-96c407ded5d5)
+                                ![image](https://github.com/user-attachments/assets/17417283-850f-40d8-b048-5ab862ff5122)
+
 
 Ejemplo:
 
 
 
-                                  ![image](https://github.com/user-attachments/assets/3f40c28b-df31-4e33-9474-d8798c25b2d7)
+                                 ![Uploading image.png…]()
+
 
 
 
