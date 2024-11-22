@@ -94,7 +94,32 @@ Necesitaremos tomar medidas al bache (largo, ancho y profundidad) y esto se podr
 
 
 ## Manejo de Datos
-Descripción del conjunto de datos procesados y su fuente, si aplica.
+El codigo para hacer el analisis del volumen es:
+import sympy as sp
+
+# Definir las variables
+x = sp.Symbol('x')
+
+# Solicitar el diámetro y la profundidad máxima como entradas del usuario
+diametro = float(input("Ingresa el diámetro del bache en metros: "))
+profundidad_max = float(input("Ingresa la profundidad máxima del bache en metros: "))
+
+# Calcular el radio del bache
+r = diametro / 2
+
+# Definir la función del perfil del bache
+# Supongamos una parábola que pasa por y=0 en x=±r y tiene y=profundidad_max en x=0
+y = profundidad_max * (1 - (x / r)**2)
+
+# Calcular la integral del volumen
+volumen = sp.integrate(sp.pi * y**2, (x, -r, r))
+
+# Evaluar el volumen numéricamente
+volumen_numerico = sp.N(volumen)
+
+# Mostrar el resultado
+print(f"\nEl volumen total del bache es: {volumen_numerico:.2f} m³")
+
 
 ## Resultados
 Resultados obtenidos, gráficos y análisis.
