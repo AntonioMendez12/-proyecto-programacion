@@ -142,7 +142,10 @@ A partir de este análisis, podemos concluir que el uso del cálculo integral pa
 La relación entre la severidad del bache y el área bajo la curva demuestra que, cuanto mayor sea el volumen calculado, mayor será el impacto en la seguridad vial, el tráfico y el costo de la reparación. Por lo tanto, es crucial priorizar los baches más grandes y peligrosos para evitar accidentes y garantizar una circulación segura y eficiente.
 El cálculo preciso y la correcta estimación de los materiales no solo optimizan los recursos, sino que también pueden servir como base para la toma de decisiones en políticas de mantenimiento y reparación vial, contribuyendo a la sostenibilidad económica y a la mejora de la infraestructura en zonas de alto tráfico.
 
-El resultado obtenido de un ejemplo es de 4.22m³ algo que corresponde a los calculos realizados a mano para comprobar esto
+El resultado obtenido de un ejemplo es de 4.22m³ algo que corresponde a los calculos realizados a mano para comprobar esto.
+
+![ejemplo con codigo](https://github.com/user-attachments/assets/4ee81ed7-5801-43df-82c5-0a6f27885cc7)
+
 
 ## Conclusiones
 La investigación sobre la optimización del proceso de llenado de baches en la carretera Colima-Coquimatlán, específicamente a la altura del km 2.5, ha permitido identificar de manera precisa los beneficios de aplicar herramientas matemáticas como el cálculo integral para mejorar la eficiencia en las reparaciones viales. A través del análisis del volumen de los baches, calculado con la fórmula integral, se ha demostrado que este enfoque ofrece una forma precisa de determinar la cantidad exacta de material necesario para rellenar los baches, evitando el desperdicio de recursos y reduciendo los costos asociados a las reparaciones.
