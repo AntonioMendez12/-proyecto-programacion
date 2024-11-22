@@ -42,6 +42,7 @@ Cálculo integral: Con la ecuación de la curva establecida, se procedió a calc
 
                             
                          ![formula basica](https://github.com/user-attachments/assets/7e64322a-2d88-4e47-b0cd-27c0815a2919)
+                         
 
 
 
