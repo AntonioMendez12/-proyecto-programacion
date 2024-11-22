@@ -68,7 +68,9 @@ Manejo de datos
 La formula general para el calculo de volumen de un bache es:
 
 
-                     ![image](https://github.com/user-attachments/assets/b6dccea1-1504-48b4-9e38-64b126699151)
+![Formula general](https://github.com/user-attachments/assets/ac06661d-c906-48ee-963b-52dd16c395d2)
+
+              
 
 
 Ejemplo:
