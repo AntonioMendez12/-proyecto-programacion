@@ -40,11 +40,11 @@ Función matemática para la curva: Se supuso que la forma del bache podía apro
 
 Cálculo integral: Con la ecuación de la curva establecida, se procedió a calcular el área bajo la curva utilizando el cálculo integral. La fórmula básica utilizada fue:
 
-![image](https://github.com/user-attachments/assets/f9d12258-96a6-477d-8c10-cc322af7248d)
+                                 ![image](https://github.com/user-attachments/assets/f9d12258-96a6-477d-8c10-cc322af7248d)
 
 
 
-Donde f(x) es es la función que describe el perfil del bache, y a y b son los límites de la longitud del bache.
+Donde f(x) es es la función que describe el perfil del bache,  a y b son los límites de la longitud del bache.
 Estimación del material necesario: Una vez calculado el volumen del bache, se estimó la cantidad de material necesario para su relleno. Para esto, se usó el material asfáltico de alta calidad con características adecuadas para resistir las condiciones climáticas y el tráfico pesado en la zona.
 
 4. Selección y Preparación del Material de Relleno
@@ -63,15 +63,19 @@ Revisión y evaluación: Finalmente, se revisó la calidad de la reparación, as
 Una vez realizadas las reparaciones, se llevó a cabo un monitoreo de las condiciones del pavimento en los baches reparados. Se realizaron visitas periódicas para evaluar la durabilidad de las reparaciones, observando su resistencia al tráfico pesado y a las condiciones climáticas. Además, se registraron los costos de mantenimiento antes y después de la intervención para medir el impacto económico.
 Manejo de datos
 La formula general para el calculo de volumen de un bache es:
-v=∫_(-r)^r▒〖πy^2 dx〗
+                                 ![image](https://github.com/user-attachments/assets/04ec8f1b-b0a0-40cf-8da4-96c407ded5d5)
+
 Ejemplo:
-	Diámetro del bache: 7 metros
-	Profundidad Max: 0.6 metros
-r=72=3.5 metros
--3.53.512.25-x2dx
-π(12.25x-x33)|-3.53.5
-V=π(42.875-12.25)-(-92.875.-1)
-V=61.25 π metros cúbicos
+
+
+
+                                  ![image](https://github.com/user-attachments/assets/3f40c28b-df31-4e33-9474-d8798c25b2d7)
+
+
+
+
+
+ 
 A partir de los resultados obtenidos podemos considerar cual es la relación entre el cálculo con la severidad del bache, mientras más área sobre la curva haya, mayor será el bache.
 Necesitaremos tomar medidas al bache (largo, ancho y profundidad) y esto se podría convertir en algo riesgoso de hacer ya que los baches analizados en cuestión se encuentran a la altura del km. 2.5 de la carretera Colima-Coquimatlán. Una solución a esta problemática seria que las personas encargadas de medir el bache lo hagan con el mayor cuidado posible, como poner conos, señales reflectantes y usar ropa adecuada para ser visto desde distancias alejadas.
 
