@@ -122,6 +122,21 @@ volumen_numerico = sp.N(volumen)
 print(f"\nEl volumen total del bache es: {volumen_numerico:.2f} m³")
 
 
+Este código calcula el volumen de un bache modelado como una parábola de revolución a partir de los datos que el usuario ingresa: el diámetro y la profundidad máxima.
+Primero se importa la biblioteca SymPy, que permite realizar cálculos simbólicos como integrales. Luego, se define una variable simbólica x, que representa la coordenada horizontal en el perfil del bache.
+El código solicita al usuario que introduzca el diámetro del bache (la distancia total entre los bordes del bache en la superficie) y la profundidad máxima (la distancia desde la superficie hasta el punto más profundo del bache). Con estos datos, calcula el radio del bache dividiendo el diámetro entre 2.
+Se asume que el perfil del bache sigue una parábola invertida. En esta parábola, los extremos tocan la superficie (y=0y  en x=±r )y el punto central tiene la profundidad máxima (y=profundidad_max (1-(x/r)²).
+A continuación, se calcula el volumen del bache usando la fórmula del volumen de un sólido de revolución:
+
+![image](https://github.com/user-attachments/assets/dde41101-4457-43e3-98f1-b17c149361ff)
+
+
+Aquí, [y(x)]² representa el área del círculo en cada sección transversal del bache. Los límites de la integral son −r y r, que corresponden al ancho del bache.
+La integral se evalúa simbólicamente y luego se convierte en un número decimal para mostrar el resultado. Por último, se imprime el volumen total en metros cúbicos.
+Por ejemplo, si el diámetro es 7 metros y la profundidad máxima es 0.6 metros, el radio es 3.5 metros. El cálculo da como resultado un volumen aproximado de 4.22 metros cúbicos, suponiendo que el bache tiene un perfil parabólico perfecto.
+
+
+
 ## Resultados
 Resultados obtenidos, gráficos y análisis.
 
