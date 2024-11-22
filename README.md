@@ -71,8 +71,8 @@ Ejemplo:
 
 
 
-                              ![image](https://github.com/user-attachments/assets/7e6303f8-41b7-4534-82db-67f00f3e1ac0)
 
+![ejemplo baches](https://github.com/user-attachments/assets/c516c411-a10d-4ef7-bf3f-635d037d7536)
 
 
 
