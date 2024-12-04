@@ -1,5 +1,5 @@
  Código markdown
-# Creación de un programa para calcular el área del bache y así optimizar su llenado
+# Creación de un programa para que a partir de un archivo shapefile muestre la ubicaciion de los baches y muestre los poligonos de ellos
 **Autores:** Iram Antonio Mendez Partida, Sergio Mejia Manso
 
 ## Introducción
