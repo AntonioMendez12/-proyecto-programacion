@@ -153,7 +153,7 @@ El codigo Conecta Google Drive a Google Colab para acceder a shapefile, posterio
 
 Una vez que cargas la libreria lo primero que hacemos es cargar el archivo shp, se verifica el sistema de coordenadas ya que si no esta el archivo shp en EPSG:4326 las coordenadas de los baches se mostraran en algun lugar que no sea tu ubicacion deseada.
 
-Algo verdaderamente funcional que decidi implementar en mi codigo es que si tu archivo shp no esta en el sistema de coordenadas EPSG:4326 con el comando "gdf = gdf.to_crs(epsg=4326)" puedes transformar tu sistema de coordenadas a el deseada.
+Algo verdaderamente funcional que decidi implementar en mi codigo es que si tu archivo shp no esta en el sistema de coordenadas EPSG:4326 con el comando "gdf = gdf.to_crs(epsg=4326)" puedes transformar tu sistema de coordenadas a el deseado.
 
 Despues de haber hecho todos estos pasos creamos un poligono circular para representar los baches, posterior a eso calculamos el punto central de todas las geometrias y creamos el mapa y agregamos los poligonos al mapa.
 
