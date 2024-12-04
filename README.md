@@ -103,30 +103,35 @@ import geopandas as gpd
 import folium
 from shapely.geometry import Point
 
- #Cargar el archivo SHP
+Cargar el archivo SHP
+
 shp_path = "/content/drive/MyDrive/Programacion II/Proyecto/Bache.shp"
 gdf = gpd.read_file(shp_path)
 
-# Verificar el CRS original
+Verificar el CRS original
+
 print(f"CRS original: {gdf.crs}")
 
-# Asignar el CRS original si es necesario
+ Asignar el CRS original si es necesario
+ 
 if gdf.crs is None:
     gdf.crs = "EPSG:6367"
 
-# Convertir CRS a EPSG:4326
+Convertir CRS a EPSG:4326
+
 gdf = gdf.to_crs(epsg=4326)
 
-# Crear polígonos circulares para representar el tamaño de cada bache
-# Ajusta el radio en grados geográficos
+ Crear polígonos circulares para representar el tamaño de cada bache
+ Ajusta el radio en grados geográficos
+ 
 radius_in_degrees = 0.00002 # Aproximadamente 5.5 metros
 gdf['geometry'] = gdf.geometry.apply(lambda geom: geom.buffer(radius_in_degrees))
 
-# Centrar el mapa en el centroide de todos los datos
+Centrar el mapa en el centroide de todos los datos
 centroide = gdf.unary_union.centroid
 mapa = folium.Map(location=[centroide.y, centroide.x], zoom_start=15)
 
-# Agregar las geometrías de los baches al mapa
+Agregar las geometrías de los baches al mapa
 for _, row in gdf.iterrows():
     folium.GeoJson(
         row.geometry,
@@ -139,7 +144,7 @@ for _, row in gdf.iterrows():
         tooltip="Polígono del Bache"
     ).add_to(mapa)
 
-# Mostrar el mapa
+  Mostrar el mapa
 from IPython.display import display
 display(mapa)
 
