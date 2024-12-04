@@ -155,7 +155,7 @@ Una vez que cargas la libreria lo primero que hacemos es cargar el archivo shp, 
 
 Algo verdaderamente funcional que decidi implementar en mi codigo es que si tu archivo shp no esta en el sistema de coordenadas EPSG:4326 con el comando "gdf = gdf.to_crs(epsg=4326)" puedes transformar tu sistema de coordenadas a el deseado.
 
-Despues de haber hecho todos estos pasos creamos un poligono circular para representar los baches, posterior a eso calculamos el punto central de todas las geometrias y creamos el mapa y agregamos los poligonos al mapa.
+Despues de haber hecho todos estos pasos creamos un poligono circular para representar los baches, posterior a eso calculamos el punto central de todas las geometrias y creamos el mapa, ya por ultimo agregamos los poligonos al mapa.
 
 
 ## Resultados
