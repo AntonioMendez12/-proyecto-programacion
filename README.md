@@ -155,33 +155,19 @@ Despues de haber hecho todos estos pasos creamos un poligono circular para repre
 
 
 
-
-
- 
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
 ## Resultados
 A partir de este análisis, podemos concluir que el uso del cálculo integral para determinar el volumen de los baches proporciona una herramienta matemática eficaz para optimizar la reparación de infraestructuras viales. Sin embargo, es importante tener en cuenta los riesgos inherentes a la medición directa en la carretera, por lo que se deben tomar medidas de seguridad adecuadas.
 La relación entre la severidad del bache y el área bajo la curva demuestra que, cuanto mayor sea el volumen calculado, mayor será el impacto en la seguridad vial, el tráfico y el costo de la reparación. Por lo tanto, es crucial priorizar los baches más grandes y peligrosos para evitar accidentes y garantizar una circulación segura y eficiente.
 El cálculo preciso y la correcta estimación de los materiales no solo optimizan los recursos, sino que también pueden servir como base para la toma de decisiones en políticas de mantenimiento y reparación vial, contribuyendo a la sostenibilidad económica y a la mejora de la infraestructura en zonas de alto tráfico.
 
-El resultado obtenido de un ejemplo es de 4.22m³ algo que corresponde a los calculos realizados a mano para comprobar esto.
+A partir del codigo proporcionado podemos obtener visualizado los baches que queramos a partir de un archivo shapefile, esto se podria implementar por ejemplo en google maps avisandonos cada que nuestro vehiculo este cerca de algun bache peligroso y asi poder hacer realizar maniobras evasivas. Esto solo es un ejemplo en la cual la programacion geospacial podria ser utiizada para este proyecto.
 
-![ejemplo con codigo](https://github.com/user-attachments/assets/4ee81ed7-5801-43df-82c5-0a6f27885cc7)
+Los resultados que arroja nuestro codigo son: 
 
+
+![Resultado-Codigo](https://github.com/user-attachments/assets/c27b72cb-c611-4810-b8c5-ca9b1c5d3501)
+
+Algo importante que se debe aclarar es que desde el inicio de la creacion del shapefile que contenga el poligono de los baches debe de estar en la proyeccion  EPSG:4326 de lo contrario el codigo proporcionado no servira completamente.
 
 ## Conclusiones
 La investigación sobre la optimización del proceso de llenado de baches en la carretera Colima-Coquimatlán, específicamente a la altura del km 2.5, ha permitido identificar de manera precisa los beneficios de aplicar herramientas matemáticas como el cálculo integral para mejorar la eficiencia en las reparaciones viales. A través del análisis del volumen de los baches, calculado con la fórmula integral, se ha demostrado que este enfoque ofrece una forma precisa de determinar la cantidad exacta de material necesario para rellenar los baches, evitando el desperdicio de recursos y reduciendo los costos asociados a las reparaciones.
@@ -192,5 +178,4 @@ El uso del cálculo integral también ofrece una solución práctica a la comple
 No obstante, la medición precisa de los baches en la carretera presenta ciertos riesgos debido a las condiciones de tránsito y visibilidad, lo que requiere que las personas encargadas de las mediciones tomen medidas de seguridad adecuadas, como el uso de señales reflectantes y ropa visible para evitar accidentes. Esta precaución es esencial para garantizar que las intervenciones se realicen de manera segura y eficiente.
 En conclusión, la optimización del llenado de baches en la carretera Colima-Coquimatlán no solo mejora la infraestructura vial, sino que también tiene un impacto directo en la seguridad de los conductores, el flujo económico y la sostenibilidad ambiental de la región. Esta investigación proporciona un modelo que puede ser replicado en otras áreas con problemas similares, contribuyendo al desarrollo de infraestructuras más resilientes y eficientes a nivel regional y global.
 
-El hecho de que exista un programa en el cual facilite el calculo matematico para calcular el volumen de los baches habla de un paso agigantado de convertir algo dificil en facil. Sobretodo porque este programa lo puede utilizar gente que no tenga el suficiente conocimiento para realizar este tipo de calculos. Alguna mejora que se podria implementar a futuro es que por ejemplo una empresa utilice el programa o alguno parecido y lo implemente en una maquina que solo necesite escanear el bache y el mismo determinar su profundidad maxima y su diametro.
-
+El hecho de que exista un programa que te de la ubicación de los baches es algo bastante positvio, solo con que las coordenadas de los baches esten en el archivo shp tu puedes elegir tus rutas evitando los baches y asi proteger la economia de la sociedad en general. Tambien lo podrian usar los transportistas ya que asi pueden evitar caer en ellos, que se les dañe su camion y entegar sus mercancias tarde algo que genera una derrama economica negativa.  
