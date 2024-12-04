@@ -103,7 +103,7 @@ import geopandas as gpd
 import folium
 from shapely.geometry import Point
 
-# Cargar el archivo SHP
+ #Cargar el archivo SHP
 shp_path = "/content/drive/MyDrive/Programacion II/Proyecto/Bache.shp"
 gdf = gpd.read_file(shp_path)
 
