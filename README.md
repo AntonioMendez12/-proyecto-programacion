@@ -9,7 +9,6 @@ Esta investigación se enfoca en la optimización del proceso de llenado de bach
 
 En este contexto, es esencial comprender los factores geográficos y ambientales que influyen en la formación de los baches. La carretera Colima-Coquimatlán atraviesa una región con suelos predominantemente sedimentarios y arcillosos-arenosos, que, debido a sus características de retención de agua y ciclos de expansión y contracción, facilitan la aparición de grietas en el pavimento. Estos baches se ven exacerbados por el tráfico pesado de camiones, la falta de mantenimiento adecuado y la mala calidad de los materiales utilizados en las reparaciones anteriores.
 
-
 ## Desarrollo
 El objetivo de este estudio es optimizar el proceso de llenado de baches en la carretera Colima-Coquimatlán, específicamente a la altura del km 2.5, para reducir el impacto económico, social y ambiental generado por los baches. A continuación, se describe el desarrollo experimental que se realizó para abordar esta problemática, desde la caracterización de los baches hasta el cálculo preciso del material necesario para su reparación.
 
@@ -94,46 +93,79 @@ Necesitaremos tomar medidas al bache (largo, ancho y profundidad) y esto se podr
 
 
 ## Manejo de Datos
-El codigo para hacer el analisis del volumen es:
 
-import sympy as sp
+Codigo para mostrar la ubicacion y poligono de los baches:
 
-#Definir las variables
-x = sp.Symbol('x')
+from google.colab import drive
+drive.mount('/content/drive')
+%cd /content/drive/MyDrive/Programacion II/Proyecto
+import geopandas as gpd
+import folium
+from shapely.geometry import Point
 
-#Solicitar el diámetro y la profundidad máxima como entradas del usuario
-diametro = float(input("Ingresa el diámetro del bache en metros: "))
-profundidad_max = float(input("Ingresa la profundidad máxima del bache en metros: "))
+# Cargar el archivo SHP
+shp_path = "/content/drive/MyDrive/Programacion II/Proyecto/Bache.shp"
+gdf = gpd.read_file(shp_path)
 
-#Calcular el radio del bache
-r = diametro / 2
+# Verificar el CRS original
+print(f"CRS original: {gdf.crs}")
 
-#Definir la función del perfil del bache
-#Supongamos una parábola que pasa por y=0 en x=±r y tiene y=profundidad_max en x=0
-y = profundidad_max * (1 - (x / r)**2)
+# Asignar el CRS original si es necesario
+if gdf.crs is None:
+    gdf.crs = "EPSG:6367"
 
-#Calcular la integral del volumen
-volumen = sp.integrate(sp.pi * y**2, (x, -r, r))
+# Convertir CRS a EPSG:4326
+gdf = gdf.to_crs(epsg=4326)
 
-#Evaluar el volumen numéricamente
-volumen_numerico = sp.N(volumen)
+# Crear polígonos circulares para representar el tamaño de cada bache
+# Ajusta el radio en grados geográficos
+radius_in_degrees = 0.00002 # Aproximadamente 5.5 metros
+gdf['geometry'] = gdf.geometry.apply(lambda geom: geom.buffer(radius_in_degrees))
 
-#Mostrar el resultado
-print(f"\nEl volumen total del bache es: {volumen_numerico:.2f} m³")
+# Centrar el mapa en el centroide de todos los datos
+centroide = gdf.unary_union.centroid
+mapa = folium.Map(location=[centroide.y, centroide.x], zoom_start=15)
+
+# Agregar las geometrías de los baches al mapa
+for _, row in gdf.iterrows():
+    folium.GeoJson(
+        row.geometry,
+        style_function=lambda x: {
+            "fillColor": "blue",
+            "color": "black",
+            "weight": 1,
+            "fillOpacity": 0.6,
+        },
+        tooltip="Polígono del Bache"
+    ).add_to(mapa)
+
+# Mostrar el mapa
+from IPython.display import display
+display(mapa)
+
+El objetivo de este codigo es cargar un archivo de shapefile (SHP) que contiene información sobre la ubicación de baches, crear polígonos circulares representando cada bache, y visualizarlos en un mapa interactivo utilizando GeoPandas, Shapely y Folium en Google Colab. El codigo Conecta Google Drive a Google Colab para acceder a shapefile, posteriormente se importan las librerias de geopandas, follium y shapely.geometry ya que nos basaremos en estas librerias para poder trabajar. Una vez que cargas la libreria lo primero que hacemos es cargar el archivo shp, se verifica el sistema de coordenadas ya que si no esta el archivo shp en EPSG:4326 las coordenadas de los baches se mostraran en algun lugar que no sea tu ubicacion deseada. Algo verdaderamente funcional que decidi imolementar en moi codigo es que si tu archivo shp no esta en el sistema de coordenadas EPSG:4326 con el comando "gdf = gdf.to_crs(epsg=4326)" puedes transformar tu sistema de coordenadas a al deseada.
+
+Despues de haber hecho todos estos pasos creamos un poligono circular para representar los baches, posterior a eso calculamos el punto central de todas las geometrias y creamos el mapa y agregamos los poligonos al mapa.
+
+![Resultado-Codigo](https://github.com/user-attachments/assets/be9a9b95-ecdc-4f58-8207-33f475534b80)
 
 
-Este código calcula el volumen de un bache modelado como una parábola de revolución a partir de los datos que el usuario ingresa: el diámetro y la profundidad máxima.
-Primero se importa la biblioteca SymPy, que permite realizar cálculos simbólicos como integrales. Luego, se define una variable simbólica x, que representa la coordenada horizontal en el perfil del bache.
-El código solicita al usuario que introduzca el diámetro del bache (la distancia total entre los bordes del bache en la superficie) y la profundidad máxima (la distancia desde la superficie hasta el punto más profundo del bache). Con estos datos, calcula el radio del bache dividiendo el diámetro entre 2.
-Se asume que el perfil del bache sigue una parábola invertida. En esta parábola, los extremos tocan la superficie (y=0y  en x=±r )y el punto central tiene la profundidad máxima (y=profundidad_max (1-(x/r)²).
-A continuación, se calcula el volumen del bache usando la fórmula del volumen de un sólido de revolución:
-
-![image](https://github.com/user-attachments/assets/dde41101-4457-43e3-98f1-b17c149361ff)
 
 
-Aquí, [y(x)]² representa el área del círculo en cada sección transversal del bache. Los límites de la integral son −r y r, que corresponden al ancho del bache.
-La integral se evalúa simbólicamente y luego se convierte en un número decimal para mostrar el resultado. Por último, se imprime el volumen total en metros cúbicos.
-Por ejemplo, si el diámetro es 7 metros y la profundidad máxima es 0.6 metros, el radio es 3.5 metros. El cálculo da como resultado un volumen aproximado de 4.22 metros cúbicos, suponiendo que el bache tiene un perfil parabólico perfecto.
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+
 
 
 
