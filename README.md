@@ -103,35 +103,22 @@ import geopandas as gpd
 import folium
 from shapely.geometry import Point
 
-Cargar el archivo SHP
-
 shp_path = "/content/drive/MyDrive/Programacion II/Proyecto/Bache.shp"
 gdf = gpd.read_file(shp_path)
-
 Verificar el CRS original
-
 print(f"CRS original: {gdf.crs}")
-
- Asignar el CRS original si es necesario
  
 if gdf.crs is None:
     gdf.crs = "EPSG:6367"
 
-Convertir CRS a EPSG:4326
-
 gdf = gdf.to_crs(epsg=4326)
 
- Crear polígonos circulares para representar el tamaño de cada bache
- Ajusta el radio en grados geográficos
- 
 radius_in_degrees = 0.00002 # Aproximadamente 5.5 metros
 gdf['geometry'] = gdf.geometry.apply(lambda geom: geom.buffer(radius_in_degrees))
 
-Centrar el mapa en el centroide de todos los datos
 centroide = gdf.unary_union.centroid
 mapa = folium.Map(location=[centroide.y, centroide.x], zoom_start=15)
 
-Agregar las geometrías de los baches al mapa
 for _, row in gdf.iterrows():
     folium.GeoJson(
         row.geometry,
@@ -144,9 +131,22 @@ for _, row in gdf.iterrows():
         tooltip="Polígono del Bache"
     ).add_to(mapa)
 
-  Mostrar el mapa
 from IPython.display import display
 display(mapa)
+
+Codigo visto desde google colab:
+![Correccion 1](https://github.com/user-attachments/assets/1ac156fc-b3b6-4c54-8418-282dc807b085)
+
+
+
+
+![Correccion 2](https://github.com/user-attachments/assets/e0d163a6-585b-4fb4-98a1-352a838ec79a)
+
+
+
+
+![Correccion 3](https://github.com/user-attachments/assets/81630428-498f-4845-a702-670569749f52)
+
 
 El objetivo de este codigo es cargar un archivo de shapefile (SHP) que contiene información sobre la ubicación de baches, crear polígonos circulares representando cada bache, y visualizarlos en un mapa interactivo utilizando GeoPandas, Shapely y Folium en Google Colab. El codigo Conecta Google Drive a Google Colab para acceder a shapefile, posteriormente se importan las librerias de geopandas, follium y shapely.geometry ya que nos basaremos en estas librerias para poder trabajar. Una vez que cargas la libreria lo primero que hacemos es cargar el archivo shp, se verifica el sistema de coordenadas ya que si no esta el archivo shp en EPSG:4326 las coordenadas de los baches se mostraran en algun lugar que no sea tu ubicacion deseada. Algo verdaderamente funcional que decidi imolementar en moi codigo es que si tu archivo shp no esta en el sistema de coordenadas EPSG:4326 con el comando "gdf = gdf.to_crs(epsg=4326)" puedes transformar tu sistema de coordenadas a al deseada.
 
