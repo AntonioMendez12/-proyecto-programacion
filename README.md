@@ -148,11 +148,14 @@ Codigo visto desde google colab:
 ![Correccion 3](https://github.com/user-attachments/assets/81630428-498f-4845-a702-670569749f52)
 
 
-El objetivo de este codigo es cargar un archivo de shapefile (SHP) que contiene información sobre la ubicación de baches, crear polígonos circulares representando cada bache, y visualizarlos en un mapa interactivo utilizando GeoPandas, Shapely y Folium en Google Colab. El codigo Conecta Google Drive a Google Colab para acceder a shapefile, posteriormente se importan las librerias de geopandas, follium y shapely.geometry ya que nos basaremos en estas librerias para poder trabajar. Una vez que cargas la libreria lo primero que hacemos es cargar el archivo shp, se verifica el sistema de coordenadas ya que si no esta el archivo shp en EPSG:4326 las coordenadas de los baches se mostraran en algun lugar que no sea tu ubicacion deseada. Algo verdaderamente funcional que decidi imolementar en moi codigo es que si tu archivo shp no esta en el sistema de coordenadas EPSG:4326 con el comando "gdf = gdf.to_crs(epsg=4326)" puedes transformar tu sistema de coordenadas a al deseada.
+El objetivo de este codigo es cargar un archivo de shapefile (SHP) que contiene información sobre la ubicación de baches, crear polígonos circulares representando cada bache, y visualizarlos en un mapa interactivo utilizando GeoPandas, Shapely y Folium en Google Colab. 
+El codigo Conecta Google Drive a Google Colab para acceder a shapefile, posteriormente se importan las librerias de geopandas, follium y shapely.geometry ya que nos basaremos en estas librerias para poder trabajar.
+
+Una vez que cargas la libreria lo primero que hacemos es cargar el archivo shp, se verifica el sistema de coordenadas ya que si no esta el archivo shp en EPSG:4326 las coordenadas de los baches se mostraran en algun lugar que no sea tu ubicacion deseada.
+
+Algo verdaderamente funcional que decidi imolementar en mi codigo es que si tu archivo shp no esta en el sistema de coordenadas EPSG:4326 con el comando "gdf = gdf.to_crs(epsg=4326)" puedes transformar tu sistema de coordenadas a al deseada.
 
 Despues de haber hecho todos estos pasos creamos un poligono circular para representar los baches, posterior a eso calculamos el punto central de todas las geometrias y creamos el mapa y agregamos los poligonos al mapa.
-
-
 
 
 ## Resultados
