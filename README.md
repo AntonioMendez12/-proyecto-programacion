@@ -152,7 +152,6 @@ El objetivo de este codigo es cargar un archivo de shapefile (SHP) que contiene 
 
 Despues de haber hecho todos estos pasos creamos un poligono circular para representar los baches, posterior a eso calculamos el punto central de todas las geometrias y creamos el mapa y agregamos los poligonos al mapa.
 
-![Resultado-Codigo](https://github.com/user-attachments/assets/be9a9b95-ecdc-4f58-8207-33f475534b80)
 
 
 
