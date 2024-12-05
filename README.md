@@ -1,5 +1,5 @@
-# Programa Python en Colab que dado un archivo shapefile con geometría de puntos muestre la ubicación de los baches y muestre los poligonos de ellos
-**Autores:** Iram Antonio Mendez Partida, Sergio Mejia Manso
+# Programa Python en Colab que dado un archivo shapefile con geometría de puntos muestre la ubicación de los baches y muestre los poligonos del área de estos
+**Autor:** Iram Antonio Mendez Partida
 
 ## Introducción
 La calidad de las infraestructuras viales es un factor clave para el desarrollo económico, social y ambiental de cualquier región. En particular, los baches en las carreteras representan un problema significativo que afecta tanto a la seguridad de los ciudadanos como a la eficiencia del transporte. En el caso específico de la carretera Colima-Coquimatlán, especialmente a la altura del km 2.5, la presencia de baches ha generado consecuencias negativas no solo para los conductores, sino también para la actividad económica local, especialmente en el sector transportista. Estos baches, además de generar daños a los vehículos y aumentar los costos de mantenimiento, contribuyen a un mayor riesgo de accidentes y reducen la competitividad económica de la región.
