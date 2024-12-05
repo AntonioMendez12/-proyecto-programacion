@@ -147,7 +147,7 @@ Codigo visto desde google colab:
 ![Correccion 3](https://github.com/user-attachments/assets/81630428-498f-4845-a702-670569749f52)
 
 URL donde se encuentra el codigo en colab: https://colab.research.google.com/drive/1VL1eZoB1gGU1sC6xcL3HWz9GcWRf9mgG?usp=sharing
-
+ archivo py: 
 
 El objetivo de este codigo es cargar un archivo de shapefile (SHP) que contiene información sobre la ubicación de baches, crear polígonos circulares representando cada bache, y visualizarlos en un mapa interactivo utilizando GeoPandas, Shapely y Folium en Google Colab. 
 El codigo Conecta Google Drive a Google Colab para acceder a shapefile, posteriormente se importan las librerias de geopandas, follium y shapely.geometry ya que nos basaremos en estas librerias para poder trabajar.
