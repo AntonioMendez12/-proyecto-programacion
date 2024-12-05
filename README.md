@@ -1,4 +1,4 @@
-# Programa Python en Colab que dado un archivo shapefile con geometría de puntos muestre la ubicaciion de los baches y muestre los poligonos de ellos
+# Programa Python en Colab que dado un archivo shapefile con geometría de puntos muestre la ubicación de los baches y muestre los poligonos de ellos
 **Autores:** Iram Antonio Mendez Partida, Sergio Mejia Manso
 
 ## Introducción
